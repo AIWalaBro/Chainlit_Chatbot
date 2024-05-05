@@ -19,18 +19,20 @@ import chainlit as cl
 
 print("all_ok")
 
+# Load Environment Variables
 from dotenv import load_dotenv
-
 load_dotenv() 
 
+# API key
 OPENAI_API_KEY=os.getenv("OPENAI_API_KEY")
-
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 
+# Initialize text splitting
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 
 
+# 
 @cl.on_chat_start
 async def on_chat_start():
     files = None
