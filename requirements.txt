@@ -2,3 +2,5 @@ langchain
 chromadb
 tiktoken
 chainlit
+openai
+python-dotenv
